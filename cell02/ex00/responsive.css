@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    border: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    width: 100%;
+    height: 100px;
+}
+
+.item {
+    border-width: 2px;
+    border-right: 1px;
+    border-color: black;
+    border-style: solid;
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+}
+.item2 {
+    background-color: pink;
+}
