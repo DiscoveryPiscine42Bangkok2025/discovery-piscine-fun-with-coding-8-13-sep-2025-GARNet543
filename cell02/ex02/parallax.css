@@ -1,0 +1,36 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+/*sizing picture and text*/
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+/* First image */
+.first {
+  background: url("https://i.postimg.cc/L8vcrHqG/download.jpg") no-repeat center/cover;
+}  
+
+/* Second image */
+.second {
+  background: url("https://i.postimg.cc/QMgFLYGF/images.webp") no-repeat  center/cover;
+}
+
+
+/* Middle block */
+.middle {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  font-size: 1.5rem;
+}
