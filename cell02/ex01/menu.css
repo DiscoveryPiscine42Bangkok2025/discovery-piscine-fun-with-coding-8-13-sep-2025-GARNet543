@@ -1,0 +1,32 @@
+body{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+}
+.container {
+  width: 500px;
+  margin: 100px; 
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: black;
+}
+
+select {
+  margin: 0;        
+  padding: 3% 10%;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: gray;
+  background-color: lightgray;
+}
