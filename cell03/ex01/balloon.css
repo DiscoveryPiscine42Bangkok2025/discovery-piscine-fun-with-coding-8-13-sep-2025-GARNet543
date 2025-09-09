@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Example: Centers within the viewport height */
+}
+
+#balloon {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%; /* Makes it a circle */
+  background-color: red;
+  cursor: pointer;
+}
