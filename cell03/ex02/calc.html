@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+        }
+
+        .inputs {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px; 
+        }
+
+        input, select {
+            width: 150px;   
+            height: 40px;   
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 20px;
+            width: 120px;
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: lightgray;
+        }
+
+        button:active{
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="inputs">
+    <input type="text" id="left">
+    <select name="" id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="right">
+    
+</div>
+
+<button id="cal">Try me!</button>
+
+    <script>
+        const left = document.getElementById("left");
+        const right = document.getElementById("right");
+        const button = document.getElementById("cal");
+        const operation = document.getElementById("operation");
+
+        //const output = document.getElementById("debug");
+
+        // button.addEventListener("click", () => {
+        //     const leftValue = left.value;
+        //     const rightValue = right.value;
+        //     output.textContent = leftValue;
+
+        // })
+
+
+        // Text input Checking
+        function inputChecking(value) {
+            const num = Number(value)
+            return Number.isInteger(num) && num >=0;
+        }
+
+        // Alert every 30 seconds
+        setInterval(() => {
+            alert("Please, use me...");
+        }, 30000);
+
+        button.addEventListener("click", () => {
+        const leftValue = left.value;
+        const rightValue = right.value;
+
+        if (!inputChecking(leftValue) || !inputChecking(rightValue)) {
+            alert("Error :(");
+            return;
+        }
+
+        const a = Number(leftValue);
+        const b = Number(rightValue);
+        let result = 0;
+
+        // Handle operations
+        switch (operation.value) {
+            case "+":
+                result = a + b;
+                break;
+            case "-":
+                result = a - b;
+                break;
+            case "*":
+                result = a * b;
+                break;
+            case "/":
+                if (b === 0) {
+                    alert("It’s over 9000!");
+                    result ="It’s over 9000!";
+                    return;
+                }
+                result = a / b;
+                break;
+            case "%":
+                if (b === 0) {
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    return;
+                }
+                result = a % b;
+                break;
+        }
+
+        alert(result);
+        console.log(result);
+    });
+    </script>
+</body>
+</html>
