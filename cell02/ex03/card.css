@@ -1,0 +1,68 @@
+*{
+    border: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* optional: centers vertically too */
+    background-color: gray;
+}
+
+h1 {
+    padding: 3%;
+}
+
+.card {
+    width: 60vh;
+    height: 80vh;
+    border: 1px solid lightgray;
+    background: white;
+
+    display: flex;
+    flex-direction: column;       
+    align-items: center;          
+    justify-content: flex-start;  
+    position: relative;           
+}
+.aligner{
+    width: 100%;
+    height: 20px;}
+
+img {
+    width: 420px;
+    height: 50%;
+    align-items: center;
+}
+
+.login_title {
+    font-size: 35px;
+}
+
+
+.card button {
+    margin-top: auto;            
+    width: 100%;
+    height: 10%;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;              /* align horizontally */
+    justify-content: center;    /* center in parent */
+    gap: 20px;                  /* spacing between icons */
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;            /* looks clickable */
+    filter: invert(0);          /* adjust if background is dark */
+}
